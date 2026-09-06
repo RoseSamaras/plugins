@@ -48,7 +48,9 @@ Visibility gauges, citation donuts, crawl monitors, readiness scorecards, and re
 
 ## Auth
 
-On first connect, Cursor opens **OAuth 2.0 with PKCE** in your browser — sign in to Reaudit and authorize. No API key setup required.
+On first connect, click **Authenticate** in Cursor — OAuth opens in your browser. Sign in to Reaudit and click **Authorize**. Cursor completes the callback on `http://localhost:8787/callback` (or the Cursor desktop deep link).
+
+**Do not paste `https://mcp.reaudit.io/mcp` in a browser tab** — that endpoint is for MCP clients only. If you already connected via API key in `~/.cursor/mcp.json`, disable the duplicate **User** entry to avoid two `reaudit` servers.
 
 **Alternative (manual MCP config):** generate an API key at [reaudit.io/dashboard/tools](https://reaudit.io/dashboard/tools) and use either:
 - Streamable HTTP: `https://mcp.reaudit.io/mcp` with `Authorization: Bearer rau_...`
